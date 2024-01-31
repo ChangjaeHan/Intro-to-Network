@@ -271,6 +271,8 @@ Suppress display of individual DATA packet information.
 
 
 Example:
+
+
 <img width="720" alt="image" src="https://github.com/ChangjaeHan/Intro-to-Network/assets/83817116/79056b32-a0b2-428b-a60f-6ba80a2dd7fb">
 
 
