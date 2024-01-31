@@ -1,8 +1,8 @@
 # Intro-to-Network
 
 
-//////////////////////////
-#P1 UDP Transfer //////////////////////////
+
+## P1 UDP Transfer 
 
 
 ●Packet type
@@ -95,8 +95,7 @@ The requester also write the chunks that it receives to a file with the same fil
 
 
 
-//////////////////////////
-#P2 UDP+Reliable Transfer(Emulator, Window size of Data, TCP) //////////////////////////
+## P2 UDP+Reliable Transfer(Emulator, Window size of Data, TCP) 
 
 
 
@@ -264,8 +263,8 @@ Example:
 
 
 
-//////////////////////////
-#P3 Link-state routing protocol //////////////////////////
+
+## P3 Link-state routing protocol 
 
 Each node in the network is defined by an {IP,port} pair. 
 After start-up, each emulator will implement the following functions: readtopology, createroutes, forwardpacket, and buildForwardTable.
