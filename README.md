@@ -112,6 +112,8 @@ If the outbound queue for a particular priority level is full, the packet will b
 
 
 ●Packet type
+
+
 <img width="849" alt="image" src="https://github.com/ChangjaeHan/Intro-to-Network/assets/83817116/a8d0ceeb-0ab5-48a8-8841-ccb4cf430df9">
 8-bit priority, a 32-bit source IP address, a 16-bit source port, a 32-bit destination IP address, a 16-bit destination port and a 32-bit length
 
