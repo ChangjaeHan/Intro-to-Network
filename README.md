@@ -6,7 +6,7 @@
 ## 💻 P1 UDP Transfer 
 
 
-●Packet type
+### ●Packet type
 
 
 <img width="412" alt="image" src="https://github.com/ChangjaeHan/Intro-to-Network/assets/83817116/06e823d2-7687-4496-958b-4464228e6562">
@@ -27,7 +27,9 @@ No limit on the max size of the payload length.
 The requester fills the payload field with the name of the file that it is requesting.
 
 
-●Tracker
+### ●Tracker
+
+
 The tracker is a file (called tracker.txt). 
 The tracker includes a table that will give the requester enough information to retrieve the file.
 The table will have the following columns:
@@ -47,7 +49,9 @@ file1.txt 3 mumble-01 7000
 Each time the requester is run, it refers to this table to figure out where it should retrieve the file from.
 
 
-●Sender
+### ●Sender
+
+
 The sender is invoked in the following way:
 
    python3 sender.py -p <port> -g <requester port> -r <rate> -q <seq_no> -l <length>
@@ -71,7 +75,9 @@ The sequence number, and
 The first 4 bytes of the payload
 
 
-●Requester
+### ●Requester
+
+
 The requester is invoked in the following way.
 
    python3 requester.py -p <port> -o <file option>
@@ -111,7 +117,7 @@ If the outbound queue for a particular priority level is full, the packet will b
 
 
 
-●Packet type
+### ●Packet type
 
 
 <img width="849" alt="image" src="https://github.com/ChangjaeHan/Intro-to-Network/assets/83817116/a8d0ceeb-0ab5-48a8-8841-ccb4cf430df9">
@@ -174,7 +180,9 @@ Each log event must include the source hostname and port, the intended destinati
 
 
 
-●Forwarding Summary
+### ●Forwarding Summary
+
+
 The order of processing should be similar to the following. 
 
 1. Receive packet from network in a non-blocking way. This means that you should not wait/get blocked in the recvfrom function until you get a packet.
@@ -189,7 +197,9 @@ The order of processing should be similar to the following.
 
 
 
-●Reliable Transfer
+### ●Reliable Transfer
+
+
 The procedure is as follows:
 
 1. Upon receipt of a request packet, the sender sends a full window of packets at the rate specified by the user.
@@ -204,7 +214,8 @@ The procedure is as follows:
 
 
 
-●Emulator:
+### ●Emulator:
+
 
 The network emulator is invoked in the following way:
 
@@ -219,7 +230,8 @@ The network emulator must implement the routing, queueing, sending, and logging 
 Note that your emulator should NOT drop END packets. This is because testing is made harder when END packets get dropped.
 
 
-●Sender:
+### ●Sender:
+
 
 Note that the following requirements for your sender and requester are in addition to requirements stated for programming assignment 1.
 
@@ -240,7 +252,8 @@ The end packet is sent after ensuring that all data packets have been received b
 
 
 
-●Requester:
+### ●Requester:
+
 
 Requester is invoked as follows:
 
@@ -286,7 +299,8 @@ The first {IP,port} pair in each line of the topology file corresponds to a node
 
 
 
-●Createroutes:
+### ●Createroutes:
+
 
 createroutes will implement a link-state routing protocol to set up a shortest path forwarding table between nodes in the specified topology. 
 Through this function, each emulator should maintain the following datas:
@@ -332,19 +346,25 @@ If it is a routetrace packet (described below), refer to the routetrace applicat
 
 
 
-●forwardpacket
+### ●forwardpacket
+
+
 forwardpacket will determine whether to forward a packet and where to forward a packet received by an emulator in the network. Be able to handle both packets regarding the LinkStateMessage, and packets that are forwarded to it from the routetrace application (described below). 
 For LinkStateMessage, need to forward the LinkStateMessage to all its neighbors except where it comes from. 
 However, when TTL (time to live) decreases to 0, don’t need to forward this packet anymore.
 
 
-●buildForwardTable
+### ●buildForwardTable
+
+
 buildForwardTable will use the forward search algorithm to compute a forwarding table based on the topology it collected from LinkStateMessage.
 The forwarding table contains entries in the form of (Destination, Nexthop). 
 Anytime an emulator node detects a change of its topology, it calls the buildForwardTable function to update its forwarding table.
 
 
-●Emulator
+### ●Emulator
+
+
 The emulator will be invoked as follows:
 
   python3 emulator.py -p <port> -f <filename>
@@ -355,7 +375,9 @@ filename: the name of the topology file described above.
 
 
 
-●Routetrace details
+### ●Routetrace details
+
+
 Routetrace is an application similar to the standard traceroute tool which will trace the hops along a shortest path between the source and destination emulators. routetrace will send packets to the source emulator with successively larger time-to-live values until the destination node is reached and will produce an output showing the shortest path to the destination. 
 
 This application will generate an output that traces the shortest path between the source and destination node in the network that is given to it by the command line parameters below. An instance of routetrace will be invoked as follows:
@@ -389,7 +411,8 @@ If TTL is not 0, decrement the TTL field in the packet. Search in its route tabl
 
 
 
-●Example:
+### ●Example:
+
 
 Topology: 
 
