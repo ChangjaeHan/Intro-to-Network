@@ -1,8 +1,9 @@
 # Intro-to-Network
+학부 네트워크 수강하며 수행했던 프로젝트입니다. 
+1. UDP 구현 2. UDP+Reliable Transfer+Emulator 구현 3. Link-state-routing protocol 구현
 
 
-
-## P1 UDP Transfer 
+## 💻 P1 UDP Transfer 
 
 
 ●Packet type
@@ -95,7 +96,7 @@ The requester also write the chunks that it receives to a file with the same fil
 
 
 
-## P2 UDP+Reliable Transfer(Emulator, Window size of Data, TCP) 
+## 💻 P2 UDP+Reliable Transfer(Emulator, Window size of Data, TCP) 
 
 
 
@@ -264,7 +265,7 @@ Example:
 
 
 
-## P3 Link-state routing protocol 
+## 💻P3 Link-state routing protocol 
 
 Each node in the network is defined by an {IP,port} pair. 
 After start-up, each emulator will implement the following functions: readtopology, createroutes, forwardpacket, and buildForwardTable.
