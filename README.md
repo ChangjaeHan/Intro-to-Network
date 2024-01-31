@@ -7,6 +7,8 @@
 
 
 ●Packet type
+
+
 <img width="412" alt="image" src="https://github.com/ChangjaeHan/Intro-to-Network/assets/83817116/06e823d2-7687-4496-958b-4464228e6562">
 
 
